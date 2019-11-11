@@ -1,0 +1,3 @@
+{
+   "provision_scripts": "scripts/update.sh,scripts/sudoers.sh,scripts/motd.sh,scripts/openssh-server.sh,scripts/docker.sh,scripts/cleanup.sh"
+}

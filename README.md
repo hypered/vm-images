@@ -7,12 +7,23 @@ This was originally based on
 [deimosfr/packer-debian](https://github.com/deimosfr/packer-debian).
 
 
+## Variants
+
+Different variants can be built by choosing a JSON configuration file (to pass
+to Packer with the `-var-file` argument):
+
+- `minimal.json`: a base image, e.g. good enough to learn the basics of Linux.
+- `with-docker.json`: a similar image to `minimal`, this time with Docker and
+  docker-compose already installed.
+
+
 ## Debian Buster Vagrant box
 
-The image can be built with:
+The images can be built with:
 
 ```
 $ packer build -var-file variables/minimal.json debian-buster-virtualbox
+$ packer build -var-file variables/with-docker.json debian-buster-virtualbox
 ```
 
 The resulting image looks like `debian-10.1.0-amd64-virtualbox.box`.
